@@ -2,8 +2,14 @@
 
 :root {
   --primary-color: #f16d7f;
+  --second-primary: #f26376;
   --dark-color: #222;
   --light-color: #fff;
+
+  --text-color: #000;
+  --secondary-text: #fbfbfb;
+  --tertiary-text: #5d5d5d;
+  --quaternary-text: #222224;
 }
 
 * {
@@ -121,7 +127,7 @@ button {
   position: relative;
   text-align: start;
   font-size: 14px;
-  color: #000;
+  color: var(--text-color);
 }
 .menu__close {
   position: absolute;
@@ -162,7 +168,7 @@ button {
   color: var(--primary-color);
 }
 .menu__list li a:active {
-  color: #000;
+  color: var(--text-color);
 }
 .top__image {
   width: 800px;
@@ -297,7 +303,7 @@ span {
 .shop__items p {
   font-weight: 400;
   font-size: 14px;
-  color: #5d5d5d;
+  color: var(--tertiary-text);
   opacity: 0.6;
 }
 .items {
@@ -358,14 +364,14 @@ span {
   text-align: left;
   font-weight: 400;
   font-size: 13px;
-  color: #000;
+  color: var(--text-color);
 }
 .items p {
   margin-top: 16px;
   text-align: left;
   font-weight: 300;
   font-size: 14px;
-  color: #5d5d5d;
+  color: var(--tertiary-text);
   opacity: 0.6;
 }
 .item_buttons {
@@ -383,7 +389,7 @@ span {
 }
 .item_buttons:active {
   font-weight: bold;
-  color: #5d5d5d;
+  color: var(--tertiary-text);
 }
 .product {
   display: flex;
@@ -392,15 +398,15 @@ span {
 }
 .button__product {
   padding: 15px 40px;
-  border: 2px solid #f26376;
+  border: 2px solid var(--second-primary);
   font-weight: 400;
   font-size: 16px;
   background: none;
-  color: #f26376;
+  color: var(--second-primary);
   transition: all 0.3s;
 }
 .button__product:hover {
-  background-color: #f26376;
+  background-color: var(--second-primary);
   color: var(--light-color);
 }
 .button__product:active {
@@ -408,7 +414,7 @@ span {
 }
 .services {
   margin-top: 95px;
-  background-color: #222224;
+  background-color: var(--quaternary-text);
   display: flex;
   align-items: center;
   padding-top: 104px;
@@ -419,7 +425,7 @@ span {
   margin-top: 25px;
   font-weight: 400;
   font-size: 19px;
-  color: #fbfbfb;
+  color: var(--secondary-text);
 }
 .services p {
   margin-top: 16px;
@@ -427,7 +433,7 @@ span {
   font-size: 13px;
   overflow-wrap: normal;
   text-align: center;
-  color: #fbfbfb;
+  color: var(--secondary-text);
   opacity: 0.6;
 }
 .services a {
@@ -468,7 +474,7 @@ span {
   font-weight: 400;
   font-size: 20px;
   text-align: center;
-  color: #222224;
+  color: var(--quaternary-text);
 }
 .promotion {
   display: flex;
@@ -478,7 +484,7 @@ span {
   font-size: 24px;
   line-height: 167%;
   text-align: center;
-  color: #222224;
+  color: var(--quaternary-text);
 }
 .promotion__subscribe p {
   font-weight: 400;
@@ -510,14 +516,14 @@ span {
   transition: all 0.3s;
 }
 .promotion__form button:hover {
-  color: #000;
+  color: var(--text-color);
 }
 .promotion__form button:active {
   transform: scale(0.95);
 }
 
 .footer {
-  background-color: #222224;
+  background-color: var(--quaternary-text);
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -528,7 +534,7 @@ span {
 .footer__brand p {
   font-weight: 400;
   font-size: 16px;
-  color: #fbfbfb;
+  color: var(--secondary-text);
 }
 .footer__icons {
   display: flex;
@@ -554,7 +560,7 @@ span {
   background-color: var(--primary-color);
 }
 .footer__icon:hover svg {
-  fill: white;
+  fill: var(--light-color);
 }
 .footer__icon:active {
   transform: scale(0.95);
@@ -589,7 +595,7 @@ span {
     font-weight: 400;
     font-size: 12px;
     color: var(--light-color);
-    background-color: #f26376;
+    background-color: var(--second-primary);
   }
   .card__woman,
   .card__man,
