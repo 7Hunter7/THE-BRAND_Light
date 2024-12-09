@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@600;700;900&display=swap");
 
 :root {
+  /* Цвета */
   --primary-color: #f16d7f;
   --second-primary: #f26376;
   --dark-color: #222;
@@ -11,10 +12,19 @@
   --tertiary-text: #5d5d5d;
   --quaternary-text: #222224;
 
+  /* Шрифты */
   --font-base: "Lato", sans-serif;
   --font-size-base: 1rem;
   --font-size-lg: 1.5rem;
+
+  /* Отступы */
   --padding-base: 1rem;
+
+  /* Дополнительные переменные */
+  --font-size-header: 32px;
+  --font-weight-bold: 700;
+  --font-weight-normal: 400;
+  --font-weight-light: 300;
 }
 
 * {
@@ -32,6 +42,8 @@ img {
   display: block;
   max-width: 100%;
 }
+
+/* Заголовки и текст */
 h1,
 h2,
 h3,
@@ -40,14 +52,16 @@ a,
 p,
 button {
   font-family: var(--font-base);
-  font-weight: 700;
-  font-size: 32px;
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-header);
   text-align: center;
 }
 button:hover,
 a:hover {
   cursor: pointer;
 }
+
+/* Контейнеры */
 .container_big,
 .container {
   margin: 0 auto;
@@ -66,6 +80,7 @@ a:hover {
   background-color: var(--dark-color);
 }
 
+/* Навигация */
 .navigation {
   display: flex;
   justify-content: space-between;
@@ -75,16 +90,17 @@ a:hover {
 .navigation button {
   border: none;
 }
-.nav__button_left {
+.nav__button_left,
+.nav__button_right {
   padding-left: calc(50% - 570px);
   display: flex;
+}
+.nav__button_left {
   justify-content: flex-start;
   margin-left: 20px;
   gap: 40px;
 }
 .nav__button_right {
-  padding-right: calc(50% - 570px);
-  display: flex;
   justify-content: flex-end;
   margin-right: 20px;
   gap: 33px;
@@ -105,9 +121,6 @@ a:hover {
   transform: scale(1.1);
 }
 
-.cart {
-  display: none;
-}
 .top {
   position: relative;
   z-index: 1;
@@ -215,6 +228,8 @@ span {
   font-size: 32px;
   color: var(--primary-color);
 }
+
+/* Карточки */
 .section__card {
   position: relative;
   display: grid;
@@ -230,31 +245,29 @@ span {
   overflow-wrap: break-word;
   transition: box-shadow 0.3s ease;
 }
-.card__woman {
-  background-image: url(./img/FOR_WOMEN.svg);
+.card__woman,
+.card__man,
+.card__kids,
+.card__acces {
+  height: 260px;
   background-size: cover;
   background-position: center;
-  height: 260px;
+}
+.card__woman {
+  background-image: url(./img/FOR_WOMEN.svg);
 }
 .card__man {
   background-image: url(./img/FOR_MEN.svg);
-  background-size: cover;
-  background-position: center;
-  height: 260px;
 }
 .card__kids {
   background-image: url(./img/FOR_KIDS.svg);
-  background-size: cover;
-  background-position: center;
-  height: 260px;
 }
 .card__acces {
   grid-column: span 3;
   background-image: url(./img/ACCESORIES.svg);
-  background-size: cover;
-  background-position: center;
   height: 180px;
 }
+
 /* Общая группа для всех карточек */
 .card__bg {
   background: rgba(33, 22, 22, 0.7);
@@ -410,7 +423,7 @@ span {
 .button__product {
   padding: 15px 40px;
   border: 2px solid var(--second-primary);
-  font-weight: 400;
+  font-weight: var(--font-weight-normal);
   font-size: 16px;
   background: none;
   color: var(--second-primary);
@@ -543,7 +556,7 @@ span {
   padding-bottom: 24px;
 }
 .footer__brand p {
-  font-weight: 400;
+  font-weight: var(--font-weight-normal);
   font-size: 16px;
   color: var(--secondary-text);
 }
@@ -631,7 +644,6 @@ span {
   }
   .section__items {
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
     gap: 15px;
   }
   .section__card {
