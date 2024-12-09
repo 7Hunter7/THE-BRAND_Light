@@ -217,22 +217,27 @@ span {
 }
 .card__woman {
   background-image: url(./img/FOR_WOMEN.svg);
+  background-size: cover;
+  background-position: center;
   height: 260px;
-  object-fit: cover;
 }
 .card__man {
   background-image: url(./img/FOR_MEN.svg);
+  background-size: cover;
+  background-position: center;
   height: 260px;
-  object-fit: cover;
 }
 .card__kids {
   background-image: url(./img/FOR_KIDS.svg);
+  background-size: cover;
+  background-position: center;
   height: 260px;
-  object-fit: cover;
 }
 .card__acces {
   grid-column: span 3;
   background-image: url(./img/ACCESORIES.svg);
+  background-size: cover;
+  background-position: center;
   height: 180px;
 }
 .card__bg {
@@ -586,6 +591,11 @@ span {
     color: var(--light-color);
     background-color: #f26376;
   }
+  .card__woman,
+  .card__man,
+  .card__kids {
+    height: 168px;
+  }
   .top__image {
     width: 386px;
     padding-left: calc(50% - 386px);
@@ -730,17 +740,10 @@ span {
   .card__acces {
     grid-column: 1;
   }
-  .card__woman {
-    height: 247px;
-    object-fit: cover;
-  }
-  .card__man {
-    height: 247px;
-    object-fit: cover;
-  }
+  .card__woman,
+  .card__man,
   .card__kids {
-    height: 247px;
-    object-fit: cover;
+    height: 248px;
   }
   .card__acces img {
     height: 111px;
