@@ -44,7 +44,10 @@ button {
   font-size: 32px;
   text-align: center;
 }
-
+button:hover,
+a:hover {
+  cursor: pointer;
+}
 .container_big,
 .container {
   margin: 0 auto;
@@ -58,7 +61,6 @@ button {
 .center {
   padding-left: calc(50% - 570px);
   padding-right: calc(50% - 570px);
-  transform: translateX(-50%);
 }
 .header {
   background-color: var(--dark-color);
